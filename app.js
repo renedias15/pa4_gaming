@@ -1,3 +1,4 @@
+const port = process.env.PORT || 3000
 var express=require("express");
 var bodyParser=require("body-parser");
 var app=express()
