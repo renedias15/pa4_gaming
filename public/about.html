@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ABOUT</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<script src="javascripts/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			$("p").hover(function()
+			{
+				$(this).css("color","crimson");
+			},function()
+			{
+				$(this).removeAttr("style");
+			});
+			
+		}  		
+		);
+		function icon(x) {
+			if (x == 1) {
+				window.open("https://www.facebook.com/sam.dias.1048/");
+			}
+			if (x == 2) {
+				window.open("https://www.instagram.com/tv/CDWiXvVlp-t/?utm_source=ig_web_copy_link");
+			}
+			if (x == 3) {
+				window.open("https://github.com/");
+			}
+			if (x == 4) {
+				window.open("https://www.youtube.com/channel/UCV2-0lTW12PBzT6qp2v00YA");
+			}
+		}
+	</script>
+</head>
+<body class="about">
+	<div class="main">
+		<ul >
+			<div class="nav_line">
+			<li><a href="index.html">HOME</a></li>
+			<li>
+			<li><a href="gameplay.html">GALLERY</a> 	</li>
+			<li><a href="sys.html">SYSTEM REQ</a></li>
+			<li><a href="https://www.pcgamer.com/news/">NEWS</a></li>
+			<li ><a href="register_new.html">REGISTER</a></li>
+			<li><a href="about.html">ABOUT</a></li>
+		</div>
+		</ul>
+	</div>
+	<div class="logo">
+		<img src="images/logo main.png">
+	</div>
+	<div >
+		<h3 id="aboutPage">Games on this site</h3>
+			<p>Welcome to Redgaming.com, the leading online site for gaming information, where you can view a range of free online games including action games, sports games, puzzle games, games for girls, mobile games, iPhone games, Android games, Windows Phone, games for kids, flash games and many more.</p>
+
+		<h3>Player Games and Achievements</h3>
+			<p>On Redgaming.com you can play games to compile games statistics such as high scores, and rankings on your own player page and can receive awards for playing games. You can also create your avatar with clothing and accessories to represent you in our games. You can view single player games or view advanced massive multiplayer games from around the world.</p>
+
+		<h3>Join the Fun</h3>
+			<p>Register for free to get all the benefits of registered games players such as, high scores, email notifications, statistics, awards and much, much more.</p>
+	</br></br></br>
+	</div>
+	<br><br><br>
+	<div class="footer">	
+		<p style="color:crimson";>Follow us on</p>
+	<div class="wrapper">
+		<div class="icon facebook" onclick="return icon(1)">
+		  <div class="tooltip">
+  Facebook</div>
+  <span><i class="fab fa-facebook-f"></i></span>
+		</div>
+  <!-- <div class="icon twitter">
+		  <div class="tooltip">
+  Twitter</div>
+  <span><i class="fab fa-twitter"></i></span>
+		</div> -->
+  <div class="icon instagram" onclick="return icon(2)">
+		  <div class="tooltip">
+  Instagram</div>
+  <span><i class="fab fa-instagram"></i></span>
+		</div>
+  <div class="icon github" onclick="return icon(3)">
+		  <div class="tooltip">
+  Github</div>
+  <span><i class="fab fa-github"></i></span>
+		</div>
+  <div class="icon youtube" onclick="return icon(4)">
+		  <div class="tooltip">
+  YouTube</div>
+  <span><i class="fab fa-youtube"></i></span>
+		</div>
+  </div>
+</div>
+</body>
+	
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #text {
+        display: none;
+        color: red
+    }
+</style>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" type="stylesheets/css" href="css/style.css">
+    <script type="text/javascript" src="javascripts/jquery-3.4.1.min.js"></script>
+    <script>
+        function func(a) {
+            if (a == 1) {
+                window.open("https://www.facebook.com/");
+            }
+            if (a == 2) {
+                window.open("https://www.twitter.com/");
+            }
+            if (a == 3) {
+                window.open("https://www.google.com/account/about/");
+
+            }
+        }
+    </script>
+</head>
+
+<body class="login">
+    <div class="main">
+        <ul>
+            <div class="nav_line">
+                <li><a href="index.html">HOME</a></li>
+                <li>
+                <li><a href="gameplay.html">GALLERY</a> </li>
+                <li><a href="sys.html">SYSTEM REQ</a></li>
+                <li><a href="https://www.pcgamer.com/news/">NEWS</a></li>
+                <li><a href="register_new.html">REGISTER</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </div>
+        </ul>
+    </div>
+    <div class="logo">
+        <img src="images/logo main.png">
+    </div>
+    <div id="login-box">
+        <div class="left">
+            <form name="RegForm" id="REG" onsubmit="return validate()" action="http://localhost:8080/GAMING/game_serv" method="post" >
+                <br><br><br><br><br>
+            <input type="text" name="email" placeholder="E-mail" />
+            <input type="password" name="password" placeholder="Password" />
+            <input type="submit" name="signup_submit" value="Sign me up" />
+            
+        </div>
+
+        <div class="right">
+            <span class="loginwith">Sign in with a<br />social network</span>
+
+            <button class="social-signin facebook" type="button" onclick="func(1)">Log in with facebook</button>
+            <button class="social-signin twitter" type="button" onclick="func(2)">Log in with Twitter</button>
+            <button class="social-signin google" type="button" onclick="func(3)">Log in with Google+</button>
+        </div>
+        <div class="or">OR</div>
+    </form>
+   
+    </div>
+    <script>
+    function validate()
+    {
+        var username = document.forms["RegForm"]["username"].value;
+        var email = document.forms["RegForm"]["email"].value;
+        var password = document.forms["RegForm"]["password"].value;
+        var password2 = document.forms["RegForm"]["password2"].value;
+        if (email == "")
+        {
+            alert("Please enter your email-address.");
+            email.focus();
+            return false;
+        }
+        if (email.indexOf("@", 0) < 0)
+        {
+            alert("invalid email format");
+            email.focus();
+            return false;
+        }
+        if (email.indexOf(".", 0) < 0)
+        {
+            alert("enter correct format eg:nix13@gmail.com ");
+            email.focus();
+            return false;
+        }
+        if (password == "")
+        {
+            alert("Please enter a valid password.");
+            password.focus(password);
+            return false;
+        }
+        return confirm("your data will be recorded \n\
+                        click ok to confirm");
+    }
+</script>
+</body>
+
+</html>
